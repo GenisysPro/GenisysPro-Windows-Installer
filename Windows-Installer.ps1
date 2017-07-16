@@ -28,7 +28,7 @@ $WC.DownloadFile("https://download.microsoft.com/download/C/A/F/CAF5E118-4803-4D
 'Done!'
 }
 Catch{
-'Something went wronly , please restart this script later'
+'Something went wrong, please restart this script later'
 sleep 5
 exit
 }
