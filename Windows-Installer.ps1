@@ -19,6 +19,7 @@ $WC.DownloadFile("https://storage.googleapis.com/itx-technologies-141911.appspot
 [System.IO.Compression.ZipFile]::ExtractToDirectory(".\php.zip", ".\")
 'Cleaning...'
 rm php.zip
+rm start.cmd
 'Done!'
 'Downloading Startup Script'
 $WC.DownloadFile("https://raw.githubusercontent.com/GenisysPro/GenisysPro/master/start.cmd",".\start.cmd")
