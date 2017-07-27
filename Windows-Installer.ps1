@@ -33,6 +33,13 @@ else{
 'Downloading Visual C++ Redistributable for Visual Studio 2015 for 64-bit OS...'
 $WC.DownloadFile("https://download.microsoft.com/download/9/3/F/93FCF1E7-E6A4-478B-96E7-D4B285925B00/vc_redist.x64.exe",".\vc_redist.exe")
 }
+'Visual C++ Redistributable for Visual Studio 2015 will be installed.'
+'Please select "Yes" in the User Account Control dialog box.'
+sleep 5
+'Installing Visual C++ Redistributable for Visual Studio 2015...'
+Start-Process .\vc_redist.exe -NoNewWindow -Wait -ArgumentList "/install /quiet"
+'Deleting temporary files...'
+rm vc_redist.exe
 'Done!'
 }
 Catch{
@@ -41,11 +48,6 @@ sleep 5
 exit
 }
 'All have done! Run start.cmd for your new server!'
-'If it said to be'
-''
-'/usr/bin/php/php.exe: error while loading shared libraries: MSVCR110.dll: cannot open shared object file: No such file or directory'
-''
-'please install vcredist_x86.exe.'
 
 sleep 5
 rm Windows-Installer.ps1
