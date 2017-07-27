@@ -25,7 +25,14 @@ rm start.cmd
 $WC.DownloadFile("https://raw.githubusercontent.com/GenisysPro/GenisysPro/master/start.cmd",".\start.cmd")
 $WC.DownloadFile("https://raw.githubusercontent.com/GenisysPro/GenisysPro/master/start.ps1",".\start.ps1")
 'Done!'
+if ([System.IntPtr]::Size -eq 4){
+'Downloading Visual C++ Redistributable for Visual Studio 2015 for 32-bit OS...'
 $WC.DownloadFile("https://download.microsoft.com/download/9/3/F/93FCF1E7-E6A4-478B-96E7-D4B285925B00/vc_redist.x86.exe",".\vc_redist.exe")
+}
+else{
+'Downloading Visual C++ Redistributable for Visual Studio 2015 for 64-bit OS...'
+$WC.DownloadFile("https://download.microsoft.com/download/9/3/F/93FCF1E7-E6A4-478B-96E7-D4B285925B00/vc_redist.x64.exe",".\vc_redist.exe")
+}
 'Done!'
 }
 Catch{
