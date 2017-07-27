@@ -7,7 +7,11 @@ $WC = New-Object System.Net.WebClient
 sleep 1
 Try{
 'Downloading GenisysPro...'
-$WC.DownloadFile("https://gitlab.com/GenisysPro/GenisysPro/builds/artifacts/master/download?job=phar",".\GenisysPro.phar")
+$WC.DownloadFile("https://gitlab.com/GenisysPro/GenisysPro/builds/artifacts/master/download?job=phar",".\GenisysPro.zip")
+'Extracting GenisysPro...'
+[System.IO.Compression.ZipFile]::ExtractToDirectory(".\GenisysPro.zip", ".\")
+'Deleting temporary files...'
+rm GenisysPro.zip
 'Done!'
 'Downloading PHP runtime...'
 $WC.DownloadFile("https://github.com/ClearSkyTeam/PHPbinary/blob/master/PHP5-windows-x86.zip?raw=true",".\php.zip")
