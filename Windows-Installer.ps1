@@ -36,7 +36,7 @@ Try{
     $WC.DownloadFile("https://download.microsoft.com/download/9/3/F/93FCF1E7-E6A4-478B-96E7-D4B285925B00/vc_redist.x64.exe",".\vc_redist.exe")
   }
   'Visual C++ Redistributable for Visual Studio 2015 will be installed.'
-  'Please select "Yes" in the User Account Control dialog box.'
+  'When prompted, please select "Yes" in the User Account Control dialog box.'
   sleep 5
   'Installing Visual C++ Redistributable for Visual Studio 2015...'
   Start-Process .\vc_redist.exe -NoNewWindow -Wait -ArgumentList "/install /quiet"
