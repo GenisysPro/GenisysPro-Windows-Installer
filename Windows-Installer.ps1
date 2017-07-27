@@ -25,8 +25,7 @@ rm start.cmd
 $WC.DownloadFile("https://raw.githubusercontent.com/GenisysPro/GenisysPro/master/start.cmd",".\start.cmd")
 $WC.DownloadFile("https://raw.githubusercontent.com/GenisysPro/GenisysPro/master/start.ps1",".\start.ps1")
 'Done!'
-'Downloading　VS2012...'
-$WC.DownloadFile("https://download.microsoft.com/download/C/A/F/CAF5E118-4803-4D68-B6B5-A1772903D119/VSU4/vcredist_x86.exe",".\vcredist_x86.exe")
+$WC.DownloadFile("https://download.microsoft.com/download/9/3/F/93FCF1E7-E6A4-478B-96E7-D4B285925B00/vc_redist.x86.exe",".\vc_redist.exe")
 'Done!'
 }
 Catch{
