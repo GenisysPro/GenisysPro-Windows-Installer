@@ -14,7 +14,7 @@ $WC.DownloadFile("https://gitlab.com/GenisysPro/GenisysPro/builds/artifacts/mast
 rm GenisysPro.zip
 'Done!'
 'Downloading PHP runtime...'
-$WC.DownloadFile("https://github.com/ClearSkyTeam/PHPbinary/blob/master/PHP5-windows-x86.zip?raw=true",".\php.zip")
+$WC.DownloadFile("https://storage.googleapis.com/itx-technologies-141911.appspot.com/php_for_genisys%2Fphp_windows_x64_7.0.17.zip",".\php.zip")
 'Extracting...'
 [System.IO.Compression.ZipFile]::ExtractToDirectory(".\php.zip", ".\")
 'Cleaning...'
