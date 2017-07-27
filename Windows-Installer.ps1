@@ -21,8 +21,9 @@ $WC.DownloadFile("https://storage.googleapis.com/itx-technologies-141911.appspot
 rm php.zip
 rm start.cmd
 'Done!'
-'Downloading Startup Script'
+'Downloading start-up scripts...'
 $WC.DownloadFile("https://raw.githubusercontent.com/GenisysPro/GenisysPro/master/start.cmd",".\start.cmd")
+$WC.DownloadFile("https://raw.githubusercontent.com/GenisysPro/GenisysPro/master/start.ps1",".\start.ps1")
 'Done!'
 'Downloading　VS2012...'
 $WC.DownloadFile("https://download.microsoft.com/download/C/A/F/CAF5E118-4803-4D68-B6B5-A1772903D119/VSU4/vcredist_x86.exe",".\vcredist_x86.exe")
