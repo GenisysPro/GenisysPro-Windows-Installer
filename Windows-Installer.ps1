@@ -6,10 +6,6 @@ $WC = New-Object System.Net.WebClient
 '================================================================='
 sleep 1
 Try{
-'Fetching latest GenisysPro phar...'
-[xml]$gitlabinfo = $WC.DownloadString("https://gitlab.com/GenisysPro/GenisysPro/builds/artifacts/master/download?job=phar")
-$buildnumber = $gitlabinfo.freeStyleProject.lastSuccessfulBuild.number
-"Latest successful build number is #$buildnumber"
 'Downloading GenisysPro...'
 $WC.DownloadFile("https://gitlab.com/GenisysPro/GenisysPro/builds/artifacts/master/download?job=phar",".\GenisysPro.phar")
 'Done!'
