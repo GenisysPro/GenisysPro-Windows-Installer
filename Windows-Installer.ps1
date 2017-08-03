@@ -10,12 +10,11 @@ Try{
   'Done!'
   ''
   'Downloading PHP binaries...'
-  $WC.DownloadFile("https://storage.googleapis.com/itx-technologies-141911.appspot.com/php_for_genisys%2Fphp_windows_x64_7.0.17.zip",".\php.zip")
+  $WC.DownloadFile("https://github.com/GenisysPro/GenisysPro/files/1184876/PHP-7.0.21-WinNT-x64.zip",".\php.zip")
   'Extracting PHP binaries...'
   [System.IO.Compression.ZipFile]::ExtractToDirectory(".\php.zip", ".\")
   'Deleting temporary files...'
   rm php.zip
-  rm start.cmd
   'Done!'
   ''
   'Downloading start-up scripts...'
